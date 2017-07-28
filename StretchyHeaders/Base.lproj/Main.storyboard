@@ -84,6 +84,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="dateLabel" destination="AzN-uq-Yn0" id="6eg-sG-ffx"/>
                         <outlet property="headerView" destination="C9A-C1-tfj" id="rv9-f9-5V0"/>
                     </connections>
                 </tableViewController>

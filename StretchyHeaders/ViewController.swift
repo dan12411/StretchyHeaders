@@ -13,9 +13,10 @@ import UIKit
 class ViewController: UITableViewController {
     
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     let items = [
-        NewsItem(category: .World, summary: "成功不能只靠1800萬用戶，LINE@地推部隊推出數位行銷新寵兒"),
+    NewsItem(category: .World, summary: "成功不能只靠1800萬用戶，LINE@地推部隊推出數位行銷新寵兒"),
         NewsItem(category: .Eurpoe, summary: "亞馬遜第二季營收穩定成長，但獲利不如預期，關鍵就在海外虧損的大幅增加。另亞馬遜雲端服務AWS仍是主要獲利支柱，但營收成長率連續幾個..."),
         NewsItem(category: .MiddleEast, summary: "鴻海揭美國投資序幕：3000億台幣打造世界級LCD面板廠"),
         NewsItem(category: .Africa, summary: "緊跟蘋果，亞馬遜成立專門研發健康照護科技的秘密實驗室「1492」"),
@@ -49,6 +50,13 @@ class ViewController: UITableViewController {
         headerMaskLayer?.path = path.cgPath
     }
 
+    fileprivate func updateDateLabel() {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d"
+        dateLabel.text = formatter.string(from: date)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +78,8 @@ class ViewController: UITableViewController {
         headerMaskLayer.fillColor = UIColor.black.cgColor
         
         headerView.layer.mask = headerMaskLayer
+        
+        updateDateLabel()
         
         updateHeaderView()
         
