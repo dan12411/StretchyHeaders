@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9x4-6R-1x1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="wVH-vV-bNo">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <tableViewController id="9x4-6R-1x1" customClass="ViewController" customModule="StretchyHeaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hSK-zx-zlc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="C9A-C1-tfj">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY" translatesAutoresizingMaskIntoConstraints="NO" id="BEb-ST-9Jc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="BEb-ST-9Jc" firstAttribute="leading" secondItem="C9A-C1-tfj" secondAttribute="leading" id="29y-kG-OlU"/>
+                                <constraint firstAttribute="bottom" secondItem="BEb-ST-9Jc" secondAttribute="bottom" id="IqW-Av-rYH"/>
+                                <constraint firstItem="BEb-ST-9Jc" firstAttribute="top" secondItem="C9A-C1-tfj" secondAttribute="top" id="V5i-sG-nFU"/>
+                                <constraint firstAttribute="trailing" secondItem="BEb-ST-9Jc" secondAttribute="trailing" id="WVT-WS-yI1"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="qO4-Jt-yIA" customClass="NewsItemCell" customModule="StretchyHeaders" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="328" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qO4-Jt-yIA" id="g78-aZ-Yzf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-i8-Dwz">
+                                            <rect key="frame" x="16" y="8" width="108" height="8.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Dystopian films continue rule over box office with 'Maze Runner'" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THt-xy-taQ">
+                                            <rect key="frame" x="16" y="20.5" width="339" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="THt-xy-taQ" firstAttribute="leading" secondItem="i2C-i8-Dwz" secondAttribute="leading" id="A5J-FK-Vhu"/>
+                                        <constraint firstItem="THt-xy-taQ" firstAttribute="top" secondItem="i2C-i8-Dwz" secondAttribute="bottom" constant="4" id="DH8-St-JOK"/>
+                                        <constraint firstAttribute="trailing" secondItem="THt-xy-taQ" secondAttribute="trailing" constant="20" id="HnL-bp-31E"/>
+                                        <constraint firstItem="i2C-i8-Dwz" firstAttribute="top" secondItem="g78-aZ-Yzf" secondAttribute="top" constant="8" id="V1Z-PG-EQB"/>
+                                        <constraint firstAttribute="bottom" secondItem="THt-xy-taQ" secondAttribute="bottom" constant="8" id="acZ-cd-w5O"/>
+                                        <constraint firstItem="i2C-i8-Dwz" firstAttribute="leading" secondItem="g78-aZ-Yzf" secondAttribute="leading" constant="16" id="v93-6E-uS0"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i2C-i8-Dwz" secondAttribute="trailing" constant="20" symbolic="YES" id="yJF-0V-ntC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="i2C-i8-Dwz" id="JAQ-yV-s36"/>
+                                    <outlet property="summaryLabel" destination="THt-xy-taQ" id="EAE-1I-xiG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9x4-6R-1x1" id="gm3-vA-vyS"/>
+                            <outlet property="delegate" destination="9x4-6R-1x1" id="S77-4S-4f0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="headerView" destination="C9A-C1-tfj" id="rv9-f9-5V0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSg-th-Kks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="151.57421289355324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NY" width="1200" height="800"/>
+    </resources>
 </document>
