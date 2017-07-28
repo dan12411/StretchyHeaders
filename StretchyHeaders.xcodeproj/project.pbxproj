@@ -44,6 +44,7 @@
 		56CFE96B1F29EF2F00E4210A = {
 			isa = PBXGroup;
 			children = (
+				56F03B201F2AE969003B2F6A /* README.md */,
 				56CFE9761F29EF2F00E4210A /* StretchyHeaders */,
 				56CFE9751F29EF2F00E4210A /* Products */,
 			);
@@ -61,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				56CFE9771F29EF2F00E4210A /* AppDelegate.swift */,
-				56F03B201F2AE969003B2F6A /* README.md */,
 				56F03B211F2AE9F2003B2F6A /* final.gif */,
 				56CFE97E1F29EF2F00E4210A /* Assets.xcassets */,
 				56CFE9831F29EF2F00E4210A /* Info.plist */,
