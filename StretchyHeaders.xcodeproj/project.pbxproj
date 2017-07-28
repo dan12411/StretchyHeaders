@@ -26,6 +26,8 @@
 		56CFE97E1F29EF2F00E4210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CFE9811F29EF2F00E4210A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CFE9831F29EF2F00E4210A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F03B201F2AE969003B2F6A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		56F03B211F2AE9F2003B2F6A /* final.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = final.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				56CFE9771F29EF2F00E4210A /* AppDelegate.swift */,
+				56F03B201F2AE969003B2F6A /* README.md */,
+				56F03B211F2AE9F2003B2F6A /* final.gif */,
 				56CFE97E1F29EF2F00E4210A /* Assets.xcassets */,
 				56CFE9831F29EF2F00E4210A /* Info.plist */,
 				56CFE9801F29EF2F00E4210A /* LaunchScreen.storyboard */,

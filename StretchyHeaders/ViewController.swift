@@ -6,6 +6,8 @@
 //  Copyright © 2017年 洪德晟. All rights reserved.
 //
 
+// Tutorial Source: http://blog.matthewcheok.com/design-teardown-stretchy-headers/
+
 import UIKit
 
 class ViewController: UITableViewController {
