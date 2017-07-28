@@ -24,16 +24,27 @@ class ViewController: UITableViewController {
     ]
     
     private let kTableHeaderHeight: CGFloat = 300.0
+    private let kTableHeaderCutAway: CGFloat = 80.0
+    var headerMaskLayer: CAShapeLayer!
     
     // 原點在tableViewy左上角，下拉時(條件成立)，resize headerView frame by define headerRect
     private func updateHeaderView() {
-        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
+        let effectiveHeight = kTableHeaderHeight - kTableHeaderCutAway/2
+        var headerRect = CGRect(x: 0, y: -effectiveHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
         
-        if tableView.contentOffset.y < -kTableHeaderHeight {
+        if tableView.contentOffset.y < -effectiveHeight {
             headerRect.origin.y = tableView.contentOffset.y
-            headerRect.size.height = -tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y + kTableHeaderCutAway/2
         }
         headerView.frame = headerRect
+        
+        // Cutting the cut-away
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y:0))
+        path.addLine(to: CGPoint(x: headerRect.width, y:0))
+        path.addLine(to: CGPoint(x: headerRect.width, y:headerRect.height))
+        path.addLine(to: CGPoint(x: 0, y:headerRect.height - kTableHeaderCutAway))
+        headerMaskLayer?.path = path.cgPath
     }
 
     override func viewDidLoad() {
@@ -46,11 +57,20 @@ class ViewController: UITableViewController {
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
         
+        let effectiveHeight = kTableHeaderHeight - kTableHeaderCutAway/2
         // scrollview中contentView.frame.origin與scrollview.frame.origin的關係
-        tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: effectiveHeight, left: 0, bottom: 0, right: 0)
         // scrollview當前顯示區域頂點相對於frame頂點的偏移量
-        tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
+        tableView.contentOffset = CGPoint(x: 0, y: -effectiveHeight)
+        
+        // add ShapeMskerLayer
+        headerMaskLayer = CAShapeLayer()
+        headerMaskLayer.fillColor = UIColor.black.cgColor
+        
+        headerView.layer.mask = headerMaskLayer
+        
         updateHeaderView()
+        
     }
     
     override var prefersStatusBarHidden: Bool {
