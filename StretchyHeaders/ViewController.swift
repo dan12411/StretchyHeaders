@@ -25,6 +25,7 @@ class ViewController: UITableViewController {
     
     private let kTableHeaderHeight: CGFloat = 300.0
     
+    // 原點在tableViewy左上角，下拉時(條件成立)，resize headerView frame by define headerRect
     private func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
         
@@ -32,7 +33,6 @@ class ViewController: UITableViewController {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
         }
-        
         headerView.frame = headerRect
     }
 
@@ -41,12 +41,14 @@ class ViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        // take ownership of header view
         headerView = tableView.tableHeaderView
         tableView.tableHeaderView = nil
-        
         tableView.addSubview(headerView)
         
+        // scrollview中contentView.frame.origin與scrollview.frame.origin的關係
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        // scrollview當前顯示區域頂點相對於frame頂點的偏移量
         tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
         updateHeaderView()
     }

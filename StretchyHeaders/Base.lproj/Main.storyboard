@@ -23,12 +23,21 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NY" translatesAutoresizingMaskIntoConstraints="NO" id="BEb-ST-9Jc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzN-uq-Yn0">
+                                    <rect key="frame" x="22" y="22" width="60.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="BEb-ST-9Jc" firstAttribute="leading" secondItem="C9A-C1-tfj" secondAttribute="leading" id="29y-kG-OlU"/>
+                                <constraint firstItem="AzN-uq-Yn0" firstAttribute="leading" secondItem="C9A-C1-tfj" secondAttribute="leading" constant="22" id="5B8-bU-F8s"/>
+                                <constraint firstItem="AzN-uq-Yn0" firstAttribute="top" secondItem="C9A-C1-tfj" secondAttribute="top" constant="22" id="F4r-re-9J2"/>
                                 <constraint firstAttribute="bottom" secondItem="BEb-ST-9Jc" secondAttribute="bottom" id="IqW-Av-rYH"/>
                                 <constraint firstItem="BEb-ST-9Jc" firstAttribute="top" secondItem="C9A-C1-tfj" secondAttribute="top" id="V5i-sG-nFU"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AzN-uq-Yn0" secondAttribute="trailing" constant="20" symbolic="YES" id="W1i-Ul-MR9"/>
                                 <constraint firstAttribute="trailing" secondItem="BEb-ST-9Jc" secondAttribute="trailing" id="WVT-WS-yI1"/>
                             </constraints>
                         </view>
